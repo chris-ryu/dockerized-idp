@@ -1,0 +1,11 @@
+FROM mcr.microsoft.com/dotnet/core/sdk:3.0
+
+ENV LD_LIBRARY_PATH="/app/clidriver/lib/" 
+ENV PATH=$PATH:"/app/clidriver/bin:/app/clidriver/lib" 
+# ENV ASPNETCORE_URLS="http://localhost:4000"
+RUN apt-get update; \ 
+    apt-get install -y libxml2-dev;
+
+
+# COPY --from=build-env /app/out .
+ENTRYPOINT ["dotnet", "watch", "run"]

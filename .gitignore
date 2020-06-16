@@ -1,1 +1,3 @@
 idp/shibboleth-idp/webapp/WEB-INF/lib/shib-idp-mla-auth-1.0-SNAPSHOT-jar-with-dependencies.jar
+rest-rdb/bin/
+rest-rdb/obj/
