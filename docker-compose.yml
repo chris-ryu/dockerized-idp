@@ -29,11 +29,18 @@ services:
      - source: idp_encryption
      - source: idp_signing
      - source: idp_sealer     
-   
+
+  ldap:
+    build: ./ldap/
+    networks:
+     - back
+
   rest:
     build: ./rest-rdb/
     networks:
      - back
+    ports:
+     - 4000:4000
 
   sp:
     build: ./sp/ 
