@@ -25,11 +25,11 @@ permissions and limitations under the License.
        default-init-method="initialize"
        default-destroy-method="destroy">
     
-   <bean id="ValidateUsernamePasswordAgainstMlaRest" 
-       class="com.bitgaram.shibboleth.idp.authn.impl.ValidateUsernamePasswordAgainstMlaRest" 
+   <bean id="ValidateUsernamePasswordAgainstRest" 
+       class="com.bitgaram.shibboleth.idp.authn.impl.ValidateUsernamePasswordAgainstRest" 
        scope="prototype"
        p:classifiedMessages-ref="shibboleth.authn.Password.ClassifiedMessageMap" />
 
-    <alias name="ValidateUsernamePasswordAgainstMlaRest" alias="ValidateUsernamePassword"/>
+    <alias name="ValidateUsernamePasswordAgainstRest" alias="ValidateUsernamePassword"/>
 
 </beans>
