@@ -10,6 +10,31 @@
     Deployers should refer to the Shibboleth 2 documentation for a complete
     list of components  and their options.
 -->
+<resolver:AttributeDefinition xsi:type="ad:Simple" id="givenName" sourceAttributeID="givenName">
+        <resolver:Dependency ref="Oracle" />
+        <resolver:AttributeEncoder xsi:type="enc:SAML1String" name="urn:mace:dir:attribute-def:givenName" />
+</resolver:AttributeDefinition>
+
+<resolver:AttributeDefinition xsi:type="ad:Simple" id="givenName" sourceAttributeID="givenName">
+        <resolver:Dependency ref="Oracle" />
+        <resolver:AttributeEncoder xsi:type="enc:SAML1String" name="urn:mace:dir:attribute-def:givenName" />
+</resolver:AttributeDefinition>
+
+<resolver:AttributeDefinition xsi:type="ad:Simple" id="sn" sourceAttributeID="sn">
+        <resolver:Dependency ref="Oracle" />
+        <resolver:AttributeEncoder xsi:type="enc:SAML1String" name="urn:mace:dir:attribute-def:sn" />
+</resolver:AttributeDefinition>
+
+<resolver:AttributeDefinition xsi:type="ad:Simple" id="mail" sourceAttributeID="mail">
+        <resolver:Dependency ref="Oracle" />
+        <resolver:AttributeEncoder xsi:type="enc:SAML1String" name="urn:mace:dir:attribute-def:mail" />
+</resolver:AttributeDefinition>
+
+<resolver:AttributeDefinition xsi:type="ad:Simple" id="uid" sourceAttributeID="uid">
+        <resolver:Dependency ref="Oracle" />
+        <resolver:AttributeEncoder xsi:type="enc:SAML1String" name="urn:mace:dir:attribute-def:uid" />
+</resolver:AttributeDefinition>
+
 <resolver:AttributeResolver
         xmlns:resolver="urn:mace:shibboleth:2.0:resolver"
         xmlns:pc="urn:mace:shibboleth:2.0:resolver:pc"
