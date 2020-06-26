@@ -1,9 +1,8 @@
-
 <!--
 This is example metadata only. Do *NOT* supply it as is without review,
 and do *NOT* provide it in real time to your partners.
  -->
-<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" ID="_bf63813d70b5f63a1d2a3504dca89b5e268be651" entityID="https://sp.idptestbed/shibboleth">
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" ID="_37928042701cf83ef995ece3388c7ed54807ff2d" entityID="https://ds.sichimi.kr/Shibboleth.sso/Metadata">
 
   <md:Extensions xmlns:alg="urn:oasis:names:tc:SAML:metadata:algsupport">
     <alg:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/>
@@ -26,29 +25,42 @@ and do *NOT* provide it in real time to your partners.
 
   <md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:1.0:protocol">
     <md:Extensions>
-      <init:RequestInitiator xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://idptestbed/Shibboleth.sso/Login"/>
+      <mdui:UIInfo xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui">
+        <mdui:DisplayName xml:lang="ko">Sichimi Discovery Service</mdui:DisplayName>
+        <mdui:DisplayName xml:lang="en">Sichimi Discovery Service</mdui:DisplayName>
+        <mdui:Description xml:lang="ko">Korean ID Federation Discovery Service(SICHIMI)</mdui:Description>
+        <mdui:Description xml:lang="en">Korean ID Federation Discovery Service(SICHIMI)</mdui:Description>
+        <mdui:Logo height="30" width="200">https://ds.sichimi.kr/rr3/images/sichimi_main.png</mdui:Logo>
+</mdui:UIInfo>      <init:RequestInitiator xmlns:init="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Binding="urn:oasis:names:tc:SAML:profiles:SSO:request-init" Location="https://ds.sichimi.kr/Shibboleth.sso/Login"/>
+      <idpdisc:DiscoveryResponse xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" Location="https://ds.sichimi.kr/Shibboleth.sso/Login" index="1"/>
     </md:Extensions>
     <md:KeyDescriptor>
       <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
-        <ds:KeyName>79943fee7865</ds:KeyName>
+        <ds:KeyName>ds.sichimi.kr</ds:KeyName>
         <ds:X509Data>
-          <ds:X509SubjectName>CN=79943fee7865</ds:X509SubjectName>
-          <ds:X509Certificate>MIIC6zCCAdOgAwIBAgIJAOy0nki3WAOVMA0GCSqGSIb3DQEBBQUAMBcxFTATBgNV
-BAMTDDc5OTQzZmVlNzg2NTAeFw0xNTEyMTEwMzAwNDJaFw0yNTEyMDgwMzAwNDJa
-MBcxFTATBgNVBAMTDDc5OTQzZmVlNzg2NTCCASIwDQYJKoZIhvcNAQEBBQADggEP
-ADCCAQoCggEBALPBzAz0DTn+j2YsQKfqWI+m08lP5UzwVsE9ZKzLqO3PRHZqiOBm
-EaFmRrYCZCAOcJ0TXcxPGtNSo8HC4uw5/Y5lJGuI3jN7X7KB1VUQDpUSwfgOqtro
-uDoVRKrsaYZTnlNV8KbZ0WQz5s4Uw6CxKRB9RZ5iQMP1fuxc8B6GSOb3x69MiY6c
-1jlgVAc6rV4zGfpafacxOLM8qcYhY8u3TiSd0H+oiGEqi1mFLK8yp6FKzX8OUkQf
-We49YHz6wBxFOe+/p+7ziym1rBs/lGfenEo8ziCIMmjnoo257fz00bcz9rFl1rTx
-KLFfgy72xTlG72l6u+pB9VqK3YNJS52Ns5UCAwEAAaM6MDgwFwYDVR0RBBAwDoIM
-Nzk5NDNmZWU3ODY1MB0GA1UdDgQWBBRiDMNPjiAMC50WWubI3PMjP45S/DANBgkq
-hkiG9w0BAQUFAAOCAQEAYZM/iWgC93vAq0d98egEzvESKodxHffkDOagd4Kxt/S0
-AAHsVQCmAK/9kmRhsWzR3f1KIw98q4EX7nH/K68BFrerUvaL5+fEGE9W6Ki6QdW8
-bM17GQkLyRDKZzGPm/hsaG1Oxru2kDf7qSvv59aRZlZ8skrDEnx8+dZ8JKC02ZDU
-ClC+xWl1UPfO2BL4tJei/siSymGpiRqznQ2JMoTFu5CUUpoxyCVz1bl9lCVceoJ9
-FaL38knS0p5DnXcm+I8wqNEVGLDPbDalBQryhJT9fIMm1/B85gB3AWAvcu9PPfHK
-lQQUhxyEXTBJx3luLlpIjoloFKIute9K7pE5qAENjg==
+          <ds:X509SubjectName>emailAddress=help@jnu.ac.kr,CN=ds.sichimi.kr,OU=sichimi ds,O=sichimi,L=Gwangju,ST=Gwangju,C=KO</ds:X509SubjectName>
+          <ds:X509Certificate>MIID9jCCAt6gAwIBAgIJAKjrMpPZvn+IMA0GCSqGSIb3DQEBCwUAMIGPMQswCQYD
+VQQGEwJLTzEQMA4GA1UECAwHR3dhbmdqdTEQMA4GA1UEBwwHR3dhbmdqdTEQMA4G
+A1UECgwHc2ljaGltaTETMBEGA1UECwwKc2ljaGltaSBkczEWMBQGA1UEAwwNZHMu
+c2ljaGltaS5rcjEdMBsGCSqGSIb3DQEJARYOaGVscEBqbnUuYWMua3IwHhcNMjAw
+NjE1MDUxMzAxWhcNMjUwNjE0MDUxMzAxWjCBjzELMAkGA1UEBhMCS08xEDAOBgNV
+BAgMB0d3YW5nanUxEDAOBgNVBAcMB0d3YW5nanUxEDAOBgNVBAoMB3NpY2hpbWkx
+EzARBgNVBAsMCnNpY2hpbWkgZHMxFjAUBgNVBAMMDWRzLnNpY2hpbWkua3IxHTAb
+BgkqhkiG9w0BCQEWDmhlbHBAam51LmFjLmtyMIIBIjANBgkqhkiG9w0BAQEFAAOC
+AQ8AMIIBCgKCAQEAn1BnyJkMWsDK6Kn8V1ZMow6GYr8mkk3MR9PO9MbrmW/aIptL
+itPbr/D1+xRNAGLS48YYPSyvkj1u0DKghHQ9uOuWaC3BfWQ8P5fvsITHTPqKRzXR
+mdecxdPsV28mD6PzrS5yNT7Ha+vVfkZ5vFjfMyNEfmNp4g1zyJ3GFqmARq8iax5w
+gX2j2VJHIrgfceqVT6g3w1I01PmrWhzAMEWu/1SMux7t3s9TCQxDY/Ov1I5mTZ/w
+THI7C35loKwdxMCIuJ/S+xHOlTSIpYFqpkgkIj+AxKSF+gTAGajS0JkLwRB7Yaeb
+Uk1mPPm53nxD4T7DBs8tTDX1iFFyktAalPy7nwIDAQABo1MwUTAdBgNVHQ4EFgQU
+3L2Qto+ZZGYra8zax6lSeNPLgaYwHwYDVR0jBBgwFoAU3L2Qto+ZZGYra8zax6lS
+eNPLgaYwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOCAQEATLRmJRxM
+D9mlhnZi/TrGq9dfDIWLvRmFoI/n2NuD92/t/r/fWwXk03j5Ee/6VPcdhp4NELUM
+paMjT2NH3yGB91+ctfhK92gjDKwRqyp/zIRcofkKzm5+KjK8nhkXpry0nvH/3dTU
+kT+Fy/JhUcvWe2nDfDfjFWTPjs+y+yWSOmsBiXkqVh4Ld0gUFeJl3OB0wZHnksEg
+OzvrBy1suEhGRK+c3X5g36Qtl9nkWONCfPtXl2IkLuV+yztc+3iE+g29Mh2tb1TX
+vFDnLEa2a0bSapVpdoMirMo3bojHUoKdB/uNa+LUzfDn+TcYfwbWwekbAqiZnItG
+0TNtllQoI0OM/Q==
 </ds:X509Certificate>
         </ds:X509Data>
       </ds:KeyInfo>
@@ -62,17 +74,45 @@ lQQUhxyEXTBJx3luLlpIjoloFKIute9K7pE5qAENjg==
       <md:EncryptionMethod Algorithm="http://www.w3.org/2009/xmlenc11#rsa-oaep"/>
       <md:EncryptionMethod Algorithm="http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p"/>
     </md:KeyDescriptor>
-    <md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idptestbed/Shibboleth.sso/Artifact/SOAP" index="1"/>
-    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idptestbed/Shibboleth.sso/SLO/SOAP"/>
-    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idptestbed/Shibboleth.sso/SLO/Redirect"/>
-    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idptestbed/Shibboleth.sso/SLO/POST"/>
-    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://idptestbed/Shibboleth.sso/SLO/Artifact"/>
-    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idptestbed/Shibboleth.sso/SAML2/POST" index="1"/>
-    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idptestbed/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
-    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://idptestbed/Shibboleth.sso/SAML2/Artifact" index="3"/>
-    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://idptestbed/Shibboleth.sso/SAML2/ECP" index="4"/>
-    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://idptestbed/Shibboleth.sso/SAML/POST" index="5"/>
-    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://idptestbed/Shibboleth.sso/SAML/Artifact" index="6"/>
+    <md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://ds.sichimi.kr/Shibboleth.sso/Artifact/SOAP" index="1"/>
+    <md:ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://ds.sichimi.kr/Shibboleth.sso/Artifact/SOAP" index="2"/>
+    <md:SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://ds.sichimi.kr/Shibboleth.sso/SLO/Redirect"/>
+    <md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://ds.sichimi.kr/Shibboleth.sso/NIM/SOAP"/>
+    <md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://ds.sichimi.kr/Shibboleth.sso/NIM/Redirect"/>
+    <md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://ds.sichimi.kr/Shibboleth.sso/NIM/POST"/>
+    <md:ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://ds.sichimi.kr/Shibboleth.sso/NIM/Artifact"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://ds.sichimi.kr/Shibboleth.sso/SAML2/POST" index="1"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://ds.sichimi.kr/Shibboleth.sso/SAML2/POST-SimpleSign" index="2"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://ds.sichimi.kr/Shibboleth.sso/SAML2/Artifact" index="3"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://ds.sichimi.kr/Shibboleth.sso/SAML2/ECP" index="4"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://ds.sichimi.kr/Shibboleth.sso/SAML/POST" index="5"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://ds.sichimi.kr/Shibboleth.sso/SAML/Artifact" index="6"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://ds.sichimi.kr/Shibboleth.sso/SAML2/POST" index="7"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://ds.sichimi.kr/Shibboleth.sso/SAML2/POST-SimpleSign" index="8"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://ds.sichimi.kr/Shibboleth.sso/SAML2/Artifact" index="9"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="https://ds.sichimi.kr/Shibboleth.sso/SAML2/ECP" index="10"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:browser-post" Location="https://ds.sichimi.kr/Shibboleth.sso/SAML/POST" index="11"/>
+    <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:1.0:profiles:artifact-01" Location="https://ds.sichimi.kr/Shibboleth.sso/SAML/Artifact" index="12"/>
   </md:SPSSODescriptor>
 
+  <md:Organization>
+        <md:OrganizationName xml:lang="ko">SI대학교</md:OrganizationName>
+        <md:OrganizationName xml:lang="en">SI University</md:OrganizationName>
+        <md:OrganizationDisplayName xml:lang="ko">SI대학교 웹서비스</md:OrganizationDisplayName>
+        <md:OrganizationDisplayName xml:lang="en">SI University Web Service</md:OrganizationDisplayName>
+        <md:OrganizationURL xml:lang="ko">https://sp1.si.ac.kr</md:OrganizationURL>
+        <md:OrganizationURL xml:lang="en">https://sp1.si.ac.kr</md:OrganizationURL>
+</md:Organization>  <md:ContactPerson contactType="support">
+        <md:GivenName>JaeMyeong</md:GivenName>
+        <md:SurName>Yoo</md:SurName>
+        <md:EmailAddress>wesleyok@jnu.ac.kr</md:EmailAddress>
+</md:ContactPerson>  <md:ContactPerson contactType="technical">
+        <md:GivenName>JaeMyeong</md:GivenName>
+        <md:SurName>Yoo</md:SurName>
+        <md:EmailAddress>wesleyok@jnu.ac.kr</md:EmailAddress>
+</md:ContactPerson>  <md:ContactPerson contactType="administrative">
+        <md:GivenName>JaeMyeong</md:GivenName>
+        <md:SurName>Yoo</md:SurName>
+        <md:EmailAddress>wesleyok@jnu.ac.kr</md:EmailAddress>
+</md:ContactPerson>
 </md:EntityDescriptor>
