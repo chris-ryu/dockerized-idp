@@ -87,8 +87,8 @@ namespace webapi.Controllers {
                 return Ok (new WISPrBandwidth { WISPrBandwidthMaxDown = 0, WISPrBandwidthMaxUp = 0 });
             }
             _logger.LogInformation ("Get Method Log");
-            // var auth_query = Environment.GetEnvironmentVariable ("AUTH_QUERY");
-            string auth_query = $"SELECT ID AS \"uid\", USERNAME AS \"userName\", FIRST_NAME AS \"givenName\", LAST_NAME AS \"sn\", EMAIL AS \"mail\" FROM DBUSER.USERS WHERE USERNAME=:username AND PASSWORD=DBMS_CRYPTO.HASH(UTL_I18N.STRING_TO_RAW(:password, 'AL32UTF8'), 4)";
+            var auth_query = Environment.GetEnvironmentVariable ("AUTH_QUERY");
+            // string auth_query = $"SELECT ID AS \"uid\", USERNAME AS \"userName\", FIRST_NAME AS \"givenName\", LAST_NAME AS \"sn\", EMAIL AS \"mail\" FROM DBUSER.USERS WHERE USERNAME=:username AND PASSWORD=DBMS_CRYPTO.HASH(UTL_I18N.STRING_TO_RAW(:password, 'AL32UTF8'), 4)";
             // var constring = Environment.GetEnvironmentVariable("CONNECTION_STRING");
             var server = Environment.GetEnvironmentVariable ("HOST");
             var port = Environment.GetEnvironmentVariable ("DB_PORT");
@@ -96,8 +96,8 @@ namespace webapi.Controllers {
             var userName = Environment.GetEnvironmentVariable ("USER_NAME");
             var dbpassword = Environment.GetEnvironmentVariable ("PASSWORD");
             dynamic expando = new ExpandoObject();
-            // string conString = $"Data Source={server}:{port}/{database};User Id={userName};Password={dbpassword}";
-            string conString = $"Data Source=13.209.18.89:32118/XEPDB1;User Id=dbuser;Password=dbpassword";
+            string conString = $"Data Source={server}:{port}/{database};User Id={userName};Password={dbpassword}";
+            // string conString = $"Data Source=13.209.18.89:32118/XEPDB1;User Id=dbuser;Password=dbpassword";
             _logger.LogInformation (conString);
             try {
                 // using (var conn = new DB2Connection ("Server=ifx:9089;Database=stores_demo;UID=informix;Password=in4mix")) {
@@ -107,8 +107,8 @@ namespace webapi.Controllers {
                     var cmd = conn.CreateCommand ();
                     cmd.CommandText = cmdQuery;
                     _logger.LogInformation ($"query ${cmdQuery}");
-                    cmd.Parameters.Add (":username", username);
-                    cmd.Parameters.Add (":password", password);
+                    cmd.Parameters.Add (":USERID", username);
+                    cmd.Parameters.Add (":PASSWORD", password);
                     conn.Open ();
                     OracleGlobalization info = conn.GetSessionInfo ();
                     info.TimeZone = "Asia/Seoul";

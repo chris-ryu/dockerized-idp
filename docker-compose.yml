@@ -30,24 +30,21 @@ services:
      - source: idp_signing
      - source: idp_sealer     
 
-  ldap:
-    build: ./ldap/
-    networks:
-     - back
-
   rest:
     build: ./rest-rdb/
     networks:
      - back
     ports:
      - 4000:4000
+    env_file: 
+     - ./rest-rdb/env/db_server_oracle.env
 
-  sp:
-    build: ./sp/ 
-    networks:
-     - back
-    secrets:
-     - source: sp_key
+  # sp:
+  #   build: ./sp/ 
+  #   networks:
+  #    - back
+  #   secrets:
+  #    - source: sp_key
   
   simplesamlphp:
     build: ./simplesamlphp/
