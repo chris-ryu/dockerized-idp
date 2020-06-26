@@ -42,7 +42,8 @@
                 <ref bean="SAML2.Logout" />
                 <ref bean="SAML2.AttributeQuery" />
                 <ref bean="SAML2.ArtifactResolution" />
-                <ref bean="Liberty.SSOS" />
+                <ref bean="CAS.LoginConfiguration" />
+                <ref bean="CAS.ValidateConfiguration" />
             </list>
         </property>
     </bean>
@@ -50,7 +51,13 @@
     <!-- Container for any overrides you want to add. -->
 
     <util:list id="shibboleth.RelyingPartyOverrides">
-    
+        <bean parent="RelyingPartyByName" c:relyingPartyIds="https://sp.ccc.local/shibboleth">
+            <property name="profileConfigurations">
+                <list>
+                    <bean parent="SAML2.SSO" p:encryptAssertions="false" p:postAuthenticationFlows="attribute-release" />
+                </list>
+            </property>
+        </bean>
         <!--
         Override example that identifies a single RP by name and configures it
         for SAML 2 SSO without encryption. This is a common "vendor" scenario.
