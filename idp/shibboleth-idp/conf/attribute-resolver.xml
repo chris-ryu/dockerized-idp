@@ -10,52 +10,51 @@
     Deployers should refer to the Shibboleth 2 documentation for a complete
     list of components  and their options.
 -->
-<resolver:AttributeDefinition xsi:type="ad:Simple" id="givenName" sourceAttributeID="givenName">
-        <resolver:Dependency ref="Oracle" />
-        <resolver:AttributeEncoder xsi:type="enc:SAML1String" name="urn:mace:dir:attribute-def:givenName" />
-</resolver:AttributeDefinition>
 
-<resolver:AttributeDefinition xsi:type="ad:Simple" id="givenName" sourceAttributeID="givenName">
-        <resolver:Dependency ref="Oracle" />
-        <resolver:AttributeEncoder xsi:type="enc:SAML1String" name="urn:mace:dir:attribute-def:givenName" />
-</resolver:AttributeDefinition>
-
-<resolver:AttributeDefinition xsi:type="ad:Simple" id="sn" sourceAttributeID="sn">
-        <resolver:Dependency ref="Oracle" />
-        <resolver:AttributeEncoder xsi:type="enc:SAML1String" name="urn:mace:dir:attribute-def:sn" />
-</resolver:AttributeDefinition>
-
-<resolver:AttributeDefinition xsi:type="ad:Simple" id="mail" sourceAttributeID="mail">
-        <resolver:Dependency ref="Oracle" />
-        <resolver:AttributeEncoder xsi:type="enc:SAML1String" name="urn:mace:dir:attribute-def:mail" />
-</resolver:AttributeDefinition>
-
-<resolver:AttributeDefinition xsi:type="ad:Simple" id="uid" sourceAttributeID="uid">
-        <resolver:Dependency ref="Oracle" />
-        <resolver:AttributeEncoder xsi:type="enc:SAML1String" name="urn:mace:dir:attribute-def:uid" />
-</resolver:AttributeDefinition>
-
-<resolver:AttributeResolver
-        xmlns:resolver="urn:mace:shibboleth:2.0:resolver"
-        xmlns:pc="urn:mace:shibboleth:2.0:resolver:pc"
-        xmlns:ad="urn:mace:shibboleth:2.0:resolver:ad"
-        xmlns:dc="urn:mace:shibboleth:2.0:resolver:dc"
-        xmlns:enc="urn:mace:shibboleth:2.0:attribute:encoder"
-        xmlns:sec="urn:mace:shibboleth:2.0:security"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="urn:mace:shibboleth:2.0:resolver http://shibboleth.net/schema/idp/shibboleth-attribute-resolver.xsd
+<resolver:AttributeResolver xmlns:resolver="urn:mace:shibboleth:2.0:resolver" 
+    xmlns:pc="urn:mace:shibboleth:2.0:resolver:pc" 
+    xmlns:ad="urn:mace:shibboleth:2.0:resolver:ad" 
+    xmlns:dc="urn:mace:shibboleth:2.0:resolver:dc" 
+    xmlns:enc="urn:mace:shibboleth:2.0:attribute:encoder" 
+    xmlns:sec="urn:mace:shibboleth:2.0:security" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:mace:shibboleth:2.0:resolver http://shibboleth.net/schema/idp/shibboleth-attribute-resolver.xsd
                             urn:mace:shibboleth:2.0:resolver:pc http://shibboleth.net/schema/idp/shibboleth-attribute-resolver-pc.xsd
                             urn:mace:shibboleth:2.0:resolver:ad http://shibboleth.net/schema/idp/shibboleth-attribute-resolver-ad.xsd
                             urn:mace:shibboleth:2.0:resolver:dc http://shibboleth.net/schema/idp/shibboleth-attribute-resolver-dc.xsd
                             urn:mace:shibboleth:2.0:attribute:encoder http://shibboleth.net/schema/idp/shibboleth-attribute-encoder.xsd
                             urn:mace:shibboleth:2.0:security http://shibboleth.net/schema/idp/shibboleth-security.xsd">
 
-  <resolver:DataConnector id="Oracle" xsi:type="RelationalDatabase" xmlns="urn:mace:shibboleth:2.0:resolver">
-	        <SimpleManagedConnection jdbcDriver="oracle.jdbc.driver.OracleDriver"
-	        jdbcURL="jdbc:oracle:thin:@//13.209.18.89:32118/XEPDB1" jdbcUserName="dbuser" jdbcPassword="dbpassword" />
-	        <QueryTemplate>
-	            
-	            <![CDATA[
+    <resolver:AttributeDefinition xsi:type="ad:Simple" id="givenName" sourceAttributeID="givenName">
+        <resolver:Dependency ref="Oracle" />
+        <resolver:AttributeEncoder xsi:type="enc:SAML1String" name="urn:mace:dir:attribute-def:givenName" />
+    </resolver:AttributeDefinition>
+
+    <resolver:AttributeDefinition xsi:type="ad:Simple" id="givenName" sourceAttributeID="givenName">
+        <resolver:Dependency ref="Oracle" />
+        <resolver:AttributeEncoder xsi:type="enc:SAML1String" name="urn:mace:dir:attribute-def:givenName" />
+    </resolver:AttributeDefinition>
+
+    <resolver:AttributeDefinition xsi:type="ad:Simple" id="sn" sourceAttributeID="sn">
+        <resolver:Dependency ref="Oracle" />
+        <resolver:AttributeEncoder xsi:type="enc:SAML1String" name="urn:mace:dir:attribute-def:sn" />
+    </resolver:AttributeDefinition>
+
+    <resolver:AttributeDefinition xsi:type="ad:Simple" id="mail" sourceAttributeID="mail">
+        <resolver:Dependency ref="Oracle" />
+        <resolver:AttributeEncoder xsi:type="enc:SAML1String" name="urn:mace:dir:attribute-def:mail" />
+    </resolver:AttributeDefinition>
+
+    <resolver:AttributeDefinition xsi:type="ad:Simple" id="uid" sourceAttributeID="uid">
+        <resolver:Dependency ref="Oracle" />
+        <resolver:AttributeEncoder xsi:type="enc:SAML1String" name="urn:mace:dir:attribute-def:uid" />
+    </resolver:AttributeDefinition>
+
+    <resolver:DataConnector id="Oracle" xsi:type="RelationalDatabase" 
+        xmlns="urn:mace:shibboleth:2.0:resolver">
+        <SimpleManagedConnection jdbcDriver="oracle.jdbc.driver.OracleDriver" jdbcURL="jdbc:oracle:thin:@//13.209.18.89:32118/XEPDB1" jdbcUserName="dbuser" jdbcPassword="dbpassword" />
+        <QueryTemplate>
+
+            <![CDATA[
 	                SELECT 
                     ID,
                     EMAIL,
@@ -64,10 +63,10 @@
                     FROM DBUSER.USERS
                     WHERE id='$requestContext.principalName'
 	            ]]>
-	            
-	        </QueryTemplate>
-	        <Column columnName="EMAIL" attributeID="mail" />
-	        <Column columnName="LAST_NAME" attributeID="sn" />
-	        <Column columnName="FIRST_NAME" attributeID="givenName" />
-	    </resolver:DataConnector>
+
+        </QueryTemplate>
+        <Column columnName="EMAIL" attributeID="mail" />
+        <Column columnName="LAST_NAME" attributeID="sn" />
+        <Column columnName="FIRST_NAME" attributeID="givenName" />
+    </resolver:DataConnector>
 </resolver:AttributeResolver>
