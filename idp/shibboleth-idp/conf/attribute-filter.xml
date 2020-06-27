@@ -8,10 +8,9 @@
     Deployers should refer to the documentation for a complete list of components
     and their options.
 -->
-<AttributeFilterPolicyGroup id="ShibbolethFilterPolicy"
-        xmlns="urn:mace:shibboleth:2.0:afp"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="urn:mace:shibboleth:2.0:afp http://shibboleth.net/schema/idp/shibboleth-afp.xsd">
+<AttributeFilterPolicyGroup id="ShibbolethFilterPolicy" 
+    xmlns="urn:mace:shibboleth:2.0:afp" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:mace:shibboleth:2.0:afp http://shibboleth.net/schema/idp/shibboleth-afp.xsd">
 
     <!-- Release some attributes to an SP. -->
     <AttributeFilterPolicy id="sicimiGroup">
@@ -23,23 +22,26 @@
 
         <AttributeRule attributeID="uid">
             <PermitValueRule xsi:type="ANY" />
-    	</AttributeRule>
+        </AttributeRule>
         <AttributeRule attributeID="displayName">
             <PermitValueRule xsi:type="ANY" />
         </AttributeRule>
-    	<AttributeRule attributeID="mail">
+        <AttributeRule attributeID="mail">
             <PermitValueRule xsi:type="ANY" />
-    	</AttributeRule>
-	<AttributeRule attributeID="givenName">
+        </AttributeRule>
+        <AttributeRule attributeID="givenName">
             <PermitValueRule xsi:type="ANY" />
-	</AttributeRule>
-    	<AttributeRule attributeID="surname">
-        	<PermitValueRule xsi:type="ANY" />
-    	</AttributeRule>
-    	<AttributeRule attributeID="eduPersonPrincipalName">
+        </AttributeRule>
+        <AttributeRule attributeID="surname">
             <PermitValueRule xsi:type="ANY" />
-    	</AttributeRule>
+        </AttributeRule>
+        <AttributeRule attributeID="eduPersonPrincipalName">
+            <PermitValueRule xsi:type="ANY" />
+        </AttributeRule>
 
+        <AttributeRule attributeID="title">
+            <PermitValueRule xsi:type="ANY" />
+        </AttributeRule>
     </AttributeFilterPolicy>
 
 </AttributeFilterPolicyGroup>
