@@ -14,10 +14,10 @@
         xsi:schemaLocation="urn:mace:shibboleth:2.0:afp http://shibboleth.net/schema/idp/shibboleth-afp.xsd">
 
     <!-- Release some attributes to an SP. -->
-    <AttributeFilterPolicy id="example1">
+    <AttributeFilterPolicy id="sicimiGroup">
         <PolicyRequirementRule xsi:type="OR">
             <Rule xsi:type="Requester" value="https://sp.idptestbed/shibboleth" />
-            <Rule xsi:type="Requester" value="https://ds.sichimi.kr" />
+            <Rule xsi:type="Requester" value="https://ds.sichimi.kr/Shibboleth.sso/Metadata" />
             <Rule xsi:type="Requester" value="http://idptestbed/sp/simplesamlphp" />
         </PolicyRequirementRule>
 
