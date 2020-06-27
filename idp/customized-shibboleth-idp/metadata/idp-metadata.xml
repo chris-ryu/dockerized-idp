@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+     This is example metadata only. Do *NOT* supply it as is without review,
+     and do *NOT* provide it in real time to your partners.
+
+     This metadata is not dynamic - it will not change as your configuration changes.
+-->
+<EntityDescriptor  xmlns="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" xmlns:req-attr="urn:oasis:names:tc:SAML:protocol:ext:req-attr" validUntil="2020-06-26T07:55:22.181Z" entityID="https://idp.bitgaram.info/idp/shibboleth">
+
+    <IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol urn:oasis:names:tc:SAML:1.1:protocol urn:mace:shibboleth:1.0">
+
+        <Extensions>
+            <shibmd:Scope regexp="false">bitgaram.info</shibmd:Scope>
+<!--
+    Fill in the details for your IdP here 
+
+            <mdui:UIInfo>
+                <mdui:DisplayName xml:lang="en">A Name for the IdP at idp.bitgaram.info</mdui:DisplayName>
+                <mdui:Description xml:lang="en">Enter a description of your IdP at idp.bitgaram.info</mdui:Description>
+                <mdui:Logo height="80" width="80">https://idp.bitgaram.info/Path/To/Logo.png</mdui:Logo>
+            </mdui:UIInfo>
+-->
+        </Extensions>
+
+        <!-- First signing certificate is BackChannel, the Second is FrontChannel -->
+        <KeyDescriptor use="signing">
+            <ds:KeyInfo>
+                    <ds:X509Data>
+                        <ds:X509Certificate>
+MIIELzCCApegAwIBAgIUWP6NEgOXpZD2hmBzmLShhsBlwNQwDQYJKoZIhvcNAQEL
+BQAwHDEaMBgGA1UEAwwRaWRwLmJpdGdhcmFtLmluZm8wHhcNMjAwNjI2MDc1NTIw
+WhcNNDAwNjI2MDc1NTIwWjAcMRowGAYDVQQDDBFpZHAuYml0Z2FyYW0uaW5mbzCC
+AaIwDQYJKoZIhvcNAQEBBQADggGPADCCAYoCggGBALqjqfUdNXVbe4dywO8lDjTv
+Tr/7c+NrlmKSzFAJv/u4MiO8EouZLQmjj0XaeOiDDe/RVhKvcRjNE0vCfiQYphg9
+NreuPp0Vp7ujnuAW20UDk7xhJqTmhHu80yUvaSNQV1DMimp++U91Yq4HpxuxEXZZ
+yJn/Fl+L1sPugvXE+zr7M8AjaDCJEMGPvlxNOgZJIdLfzkZM8g4XXyYa7vqvxVnd
+bj87wvFvH7/fmUgbV8BExISZ+iarAENu+8cjAc5ALx7SkSCJhE5v0Bvu5Qq1Z6Za
+TssY7GrQ4XcA+T6vwB0nP9+Pt/QfHV2e2cd3PCBUhuQbtKorZagC+zOivKgIFsr+
+xuDo9gwaVhwjW5FqiU9VPP/ROkjzaFdyR6kDKczUgGxVmS3VT5DrMIkMFeBZbQCq
+QdJafFs4Hx2NOIs6FGytsHVlvMfNsLoHy/fiq9IUnUjTVR2ASO7j1qtq2ZmpokoI
+P9FMAJL+kJJvainaON/H55jcMm6hjnchzWwfiMSHSwIDAQABo2kwZzAdBgNVHQ4E
+FgQULrvs/pI3ay6aqI3z3y7M4wWGKJQwRgYDVR0RBD8wPYIRaWRwLmJpdGdhcmFt
+LmluZm+GKGh0dHBzOi8vaWRwLmJpdGdhcmFtLmluZm8vaWRwL3NoaWJib2xldGgw
+DQYJKoZIhvcNAQELBQADggGBALPYK/b3KmbyPJtTQjnPqgWOzeBn4Q6WOBwa8UJj
+YzQRf0RAnTIu3St5N2Um1TJwPBPtc9V282PtBXLwEsT/fAVHcw3lRjzqm4oULTyf
+Mk6snr/4tfmMRo/IjeDXzFi3cJv4bsLDz1cMk/OaSOie+4O2J0kBBNStrzjnwqPK
+CliqalakvBIT+zV/8lrOHAaUhA1lIxYZ2MupMUuUb8P0csSXzU8C76x3t2MDT/1w
+pI060yN58PMkET/6uAEdPeqwmtxgOxLto0XbHdUl16UEZp1E7mQXXaMVrFWSWWJp
+tlfD0BR25iCe9I4dZ+9ZOPoT32OitQL+ZdgG+2rhmr1Ox67nlu2bnIgrupNfOvJs
+utMj7bUEqrc8P6hAq8f4eJR3EdM0vJBvJEMjsqkYO0KP4zp+0TBgEDG9pkA3NeVo
+9Dexft82eb8b1lGJG7KkFRYCREWmg2wDFAiQpKwVS+dY+SAZfgpC70a5rzkCbWfX
+X8tdmh8dlEZDBfuHnNZD0XlGKw==
+                        </ds:X509Certificate>
+                    </ds:X509Data>
+            </ds:KeyInfo>
+
+        </KeyDescriptor>
+        <KeyDescriptor use="signing">
+            <ds:KeyInfo>
+                    <ds:X509Data>
+                        <ds:X509Certificate>
+MIIEMDCCApigAwIBAgIVAKXSKowiTkJ3GUjdjXvCzip9besrMA0GCSqGSIb3DQEB
+CwUAMBwxGjAYBgNVBAMMEWlkcC5iaXRnYXJhbS5pbmZvMB4XDTIwMDYyNjA3NTUx
+OFoXDTQwMDYyNjA3NTUxOFowHDEaMBgGA1UEAwwRaWRwLmJpdGdhcmFtLmluZm8w
+ggGiMA0GCSqGSIb3DQEBAQUAA4IBjwAwggGKAoIBgQCIcY7TRAXsfik/EF1UosAV
+bmE2YL2dwA8S3ZvmhnPqbnL+eMSrrWsSopec4+gAvtX9tW5Kbr6StXzWyiYyohTK
+QAm56oWnLYrlzII/i1eQWRo+e9DqVGXyOfcbqKmINXTPNU/WP1iOh9V50kTUEP81
+r2Pg2GX6h09LUE+DdsYws1judWFHQtoH8CxLdddn6H8vqH1zcXTuH3ObAvV4YbG7
+Xy20OnUvBrEASmW6HSd54x3XvNTzpCGMBZ92ojKMa8tFkthdC0RHsmrc1JA7ya0T
+Loraimlgv90sxoeQag/qkCBuBA1Dnf+OZxf5A0Wbc4+ASx8nGO8frNNOQxhg+pb/
+YOAs8lqBk1Kcofm/i/2kp7IJIJsjOFO41hn6R7DUDKaAFksWV+jWQ9Lq4JqCYXaq
+aksObR1w84/jplvksiB/NdE9LCNmR1fKrAQ6txtPbFB5Z7cTfKFHafn5wT9iSHf7
+gAtN+OC/BARNhJ56S1lOvizgUcTMhB8I9abj03baPpkCAwEAAaNpMGcwHQYDVR0O
+BBYEFJ2g+zy65uIQ5wbUG+eIJG2R988AMEYGA1UdEQQ/MD2CEWlkcC5iaXRnYXJh
+bS5pbmZvhihodHRwczovL2lkcC5iaXRnYXJhbS5pbmZvL2lkcC9zaGliYm9sZXRo
+MA0GCSqGSIb3DQEBCwUAA4IBgQAzdpPKbJvx0RuNRYb+kE/k70wgISGQQ6gVP1mM
+DHsr0i2ycDvBFY9aNn3nGf5Z9tdlwjkcUlBe4dfSNREbCaotceXrXoriZvojFd82
+jcj4tF+CKRJMJxy4kWMAejxo+AI+jDs7nQoS2cxiEpSZkLBhQS1lPqAqhr/bwoqL
+nIXKY7+Mj5FAmLnCHL/nFkFebtbmhO+L1JH+1JlG+cAOz4bOgPL9sObUSR0tkJkQ
+0LadBwqjc7ManYUUfZd+S+JnR6eVevNxeZRq9sBsUumgMxTBYxYaYfLc+vr/Xjuf
+9f0y0rqnsLBfhGcmXtXyK6eV+cfvzNkrG4PkM5DrC/2/L2yfKyrJ73QT0ZuYY15K
+EF+65ghatnvHeghrlcOHnFhOz+pL9QbRn9GfHqM0jJ37962lpR9B99N1J0NvK4Qu
+60aNfdnMxLpaKQX6lWflQCdd9H/I8BfzvhantRgtZYmQ/9+JvGc7VzSFa9evBa/j
+Bi6mgb/1LF3tRqQxXikCGsaoz2Y=
+                        </ds:X509Certificate>
+                    </ds:X509Data>
+            </ds:KeyInfo>
+
+        </KeyDescriptor>
+        <KeyDescriptor use="encryption">
+            <ds:KeyInfo>
+                    <ds:X509Data>
+                        <ds:X509Certificate>
+MIIEMDCCApigAwIBAgIVAPL4EN9kELVAH0TiallLcoEJqOcPMA0GCSqGSIb3DQEB
+CwUAMBwxGjAYBgNVBAMMEWlkcC5iaXRnYXJhbS5pbmZvMB4XDTIwMDYyNjA3NTUy
+MFoXDTQwMDYyNjA3NTUyMFowHDEaMBgGA1UEAwwRaWRwLmJpdGdhcmFtLmluZm8w
+ggGiMA0GCSqGSIb3DQEBAQUAA4IBjwAwggGKAoIBgQCRkNqjVG5Zf415xPAQovzh
+W54r8xA2wJV/Trvhi6OnYfGo6AzYSwjcI1aLwesg2/aHHItyL30ulTGzTsiooui+
+IFlwn3iYQOeYH1MdWfXrzTClHkqbKooR3uS9/CI5WLuKeeTUDXMJytDsRPBCr7tn
+IiSVW5Ap0ZexDCQEzTL3eIlx+OrG/hPpAPYdW1k1n6lq7/n8625ZMI2IKrYcS6Di
+eHpCsN/rVBGU6CfUJCeRSsI+jLOOoOwH2ASvu56adyDOFa1otdBY9To+55urKZHW
+QjSsYCzA86LoqkHXVPoQ3sRlKmbDlsNVTdaNw2a6hcijbV/uQCpH/kJw+3Nxh9pj
+nPP+vcn8T6r0QzqYXNEJ3zSwuDZ7brPXSnLQKQeok1V1UFZLfA0+MwQKI8hI74Vd
+2GTOD/sl2sSu8ep2dS4lwQ7inGMZ10HvfdF35grkASN9xWAD7kMdkljRZJ2F4dHD
+KcyAxoum8dcBt9zbcr7aJHTzUyMMKrKfskE6L7y0KkECAwEAAaNpMGcwHQYDVR0O
+BBYEFB6XKskJ5DBFnO/1kQtKT/E/a2iUMEYGA1UdEQQ/MD2CEWlkcC5iaXRnYXJh
+bS5pbmZvhihodHRwczovL2lkcC5iaXRnYXJhbS5pbmZvL2lkcC9zaGliYm9sZXRo
+MA0GCSqGSIb3DQEBCwUAA4IBgQBLjBt20rMJXmzXIECYYm5foo2KWrxI/0jkO3DX
+7prhCUWU91cfWsnowguqVHv7xdXiTOaEZm4W5LmtODSdfh7s8MWAhrR4+QH4XIpw
+Zd7O3dxDQ1JB/bSdE57hO83jGFcaIvbqjeqkkwRz9K3vUXwPB6mHVT0fbYoYLdXO
+VkF7wFDP4lBb320/jlUZ3kaM4loRWr4+wxlBD9rM2k/OOFEcGstJdMXY/iyccjr1
+ETR1tH28U/bJxIuEYVQ5RRdCCz2ANVNQvfc4NI33WpD6fEnVH4QhDWMlfsjOZhP8
+6TVOSwtve9xiIlcsV2POXGvJvmNMHjk0gq8wXkrns44SUitC25paChFg4bJJ11SF
+LguThB0kzsywM7kY/q+mMAzCr0KsnVsnLAybECcq0JV7nqa5mcpTamMg3xTomv9c
+IyPw6XfrK8L45aQEi+SAQHNWUgaKMwgjAeVxTRxw3wWfvdHqilXSScTSVllzlSA1
+xmImDIzXmou/capZa7uv5DIPRa8=
+                        </ds:X509Certificate>
+                    </ds:X509Data>
+            </ds:KeyInfo>
+
+        </KeyDescriptor>
+
+        <ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.bitgaram.info:8443/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
+        <ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.bitgaram.info:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+
+        <!--
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.bitgaram.info/idp/profile/SAML2/Redirect/SLO"/>
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.bitgaram.info/idp/profile/SAML2/POST/SLO"/>
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://idp.bitgaram.info/idp/profile/SAML2/POST-SimpleSign/SLO"/>
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.bitgaram.info:8443/idp/profile/SAML2/SOAP/SLO"/>
+        -->
+
+        <SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://idp.bitgaram.info/idp/profile/Shibboleth/SSO"/>
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" req-attr:supportsRequestedAttributes="true" Location="https://idp.bitgaram.info/idp/profile/SAML2/POST/SSO"/>
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" req-attr:supportsRequestedAttributes="true" Location="https://idp.bitgaram.info/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" req-attr:supportsRequestedAttributes="true" Location="https://idp.bitgaram.info/idp/profile/SAML2/Redirect/SSO"/>
+
+    </IDPSSODescriptor>
+
+
+    <AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol">
+
+        <Extensions>
+            <shibmd:Scope regexp="false">bitgaram.info</shibmd:Scope>
+        </Extensions>
+
+        <!-- First signing certificate is BackChannel, the Second is FrontChannel -->
+        <KeyDescriptor use="signing">
+            <ds:KeyInfo>
+                    <ds:X509Data>
+                        <ds:X509Certificate>
+MIIELzCCApegAwIBAgIUWP6NEgOXpZD2hmBzmLShhsBlwNQwDQYJKoZIhvcNAQEL
+BQAwHDEaMBgGA1UEAwwRaWRwLmJpdGdhcmFtLmluZm8wHhcNMjAwNjI2MDc1NTIw
+WhcNNDAwNjI2MDc1NTIwWjAcMRowGAYDVQQDDBFpZHAuYml0Z2FyYW0uaW5mbzCC
+AaIwDQYJKoZIhvcNAQEBBQADggGPADCCAYoCggGBALqjqfUdNXVbe4dywO8lDjTv
+Tr/7c+NrlmKSzFAJv/u4MiO8EouZLQmjj0XaeOiDDe/RVhKvcRjNE0vCfiQYphg9
+NreuPp0Vp7ujnuAW20UDk7xhJqTmhHu80yUvaSNQV1DMimp++U91Yq4HpxuxEXZZ
+yJn/Fl+L1sPugvXE+zr7M8AjaDCJEMGPvlxNOgZJIdLfzkZM8g4XXyYa7vqvxVnd
+bj87wvFvH7/fmUgbV8BExISZ+iarAENu+8cjAc5ALx7SkSCJhE5v0Bvu5Qq1Z6Za
+TssY7GrQ4XcA+T6vwB0nP9+Pt/QfHV2e2cd3PCBUhuQbtKorZagC+zOivKgIFsr+
+xuDo9gwaVhwjW5FqiU9VPP/ROkjzaFdyR6kDKczUgGxVmS3VT5DrMIkMFeBZbQCq
+QdJafFs4Hx2NOIs6FGytsHVlvMfNsLoHy/fiq9IUnUjTVR2ASO7j1qtq2ZmpokoI
+P9FMAJL+kJJvainaON/H55jcMm6hjnchzWwfiMSHSwIDAQABo2kwZzAdBgNVHQ4E
+FgQULrvs/pI3ay6aqI3z3y7M4wWGKJQwRgYDVR0RBD8wPYIRaWRwLmJpdGdhcmFt
+LmluZm+GKGh0dHBzOi8vaWRwLmJpdGdhcmFtLmluZm8vaWRwL3NoaWJib2xldGgw
+DQYJKoZIhvcNAQELBQADggGBALPYK/b3KmbyPJtTQjnPqgWOzeBn4Q6WOBwa8UJj
+YzQRf0RAnTIu3St5N2Um1TJwPBPtc9V282PtBXLwEsT/fAVHcw3lRjzqm4oULTyf
+Mk6snr/4tfmMRo/IjeDXzFi3cJv4bsLDz1cMk/OaSOie+4O2J0kBBNStrzjnwqPK
+CliqalakvBIT+zV/8lrOHAaUhA1lIxYZ2MupMUuUb8P0csSXzU8C76x3t2MDT/1w
+pI060yN58PMkET/6uAEdPeqwmtxgOxLto0XbHdUl16UEZp1E7mQXXaMVrFWSWWJp
+tlfD0BR25iCe9I4dZ+9ZOPoT32OitQL+ZdgG+2rhmr1Ox67nlu2bnIgrupNfOvJs
+utMj7bUEqrc8P6hAq8f4eJR3EdM0vJBvJEMjsqkYO0KP4zp+0TBgEDG9pkA3NeVo
+9Dexft82eb8b1lGJG7KkFRYCREWmg2wDFAiQpKwVS+dY+SAZfgpC70a5rzkCbWfX
+X8tdmh8dlEZDBfuHnNZD0XlGKw==
+                        </ds:X509Certificate>
+                    </ds:X509Data>
+            </ds:KeyInfo>
+
+        </KeyDescriptor>
+        <KeyDescriptor use="signing">
+            <ds:KeyInfo>
+                    <ds:X509Data>
+                        <ds:X509Certificate>
+MIIEMDCCApigAwIBAgIVAKXSKowiTkJ3GUjdjXvCzip9besrMA0GCSqGSIb3DQEB
+CwUAMBwxGjAYBgNVBAMMEWlkcC5iaXRnYXJhbS5pbmZvMB4XDTIwMDYyNjA3NTUx
+OFoXDTQwMDYyNjA3NTUxOFowHDEaMBgGA1UEAwwRaWRwLmJpdGdhcmFtLmluZm8w
+ggGiMA0GCSqGSIb3DQEBAQUAA4IBjwAwggGKAoIBgQCIcY7TRAXsfik/EF1UosAV
+bmE2YL2dwA8S3ZvmhnPqbnL+eMSrrWsSopec4+gAvtX9tW5Kbr6StXzWyiYyohTK
+QAm56oWnLYrlzII/i1eQWRo+e9DqVGXyOfcbqKmINXTPNU/WP1iOh9V50kTUEP81
+r2Pg2GX6h09LUE+DdsYws1judWFHQtoH8CxLdddn6H8vqH1zcXTuH3ObAvV4YbG7
+Xy20OnUvBrEASmW6HSd54x3XvNTzpCGMBZ92ojKMa8tFkthdC0RHsmrc1JA7ya0T
+Loraimlgv90sxoeQag/qkCBuBA1Dnf+OZxf5A0Wbc4+ASx8nGO8frNNOQxhg+pb/
+YOAs8lqBk1Kcofm/i/2kp7IJIJsjOFO41hn6R7DUDKaAFksWV+jWQ9Lq4JqCYXaq
+aksObR1w84/jplvksiB/NdE9LCNmR1fKrAQ6txtPbFB5Z7cTfKFHafn5wT9iSHf7
+gAtN+OC/BARNhJ56S1lOvizgUcTMhB8I9abj03baPpkCAwEAAaNpMGcwHQYDVR0O
+BBYEFJ2g+zy65uIQ5wbUG+eIJG2R988AMEYGA1UdEQQ/MD2CEWlkcC5iaXRnYXJh
+bS5pbmZvhihodHRwczovL2lkcC5iaXRnYXJhbS5pbmZvL2lkcC9zaGliYm9sZXRo
+MA0GCSqGSIb3DQEBCwUAA4IBgQAzdpPKbJvx0RuNRYb+kE/k70wgISGQQ6gVP1mM
+DHsr0i2ycDvBFY9aNn3nGf5Z9tdlwjkcUlBe4dfSNREbCaotceXrXoriZvojFd82
+jcj4tF+CKRJMJxy4kWMAejxo+AI+jDs7nQoS2cxiEpSZkLBhQS1lPqAqhr/bwoqL
+nIXKY7+Mj5FAmLnCHL/nFkFebtbmhO+L1JH+1JlG+cAOz4bOgPL9sObUSR0tkJkQ
+0LadBwqjc7ManYUUfZd+S+JnR6eVevNxeZRq9sBsUumgMxTBYxYaYfLc+vr/Xjuf
+9f0y0rqnsLBfhGcmXtXyK6eV+cfvzNkrG4PkM5DrC/2/L2yfKyrJ73QT0ZuYY15K
+EF+65ghatnvHeghrlcOHnFhOz+pL9QbRn9GfHqM0jJ37962lpR9B99N1J0NvK4Qu
+60aNfdnMxLpaKQX6lWflQCdd9H/I8BfzvhantRgtZYmQ/9+JvGc7VzSFa9evBa/j
+Bi6mgb/1LF3tRqQxXikCGsaoz2Y=
+                        </ds:X509Certificate>
+                    </ds:X509Data>
+            </ds:KeyInfo>
+
+        </KeyDescriptor>
+        <KeyDescriptor use="encryption">
+            <ds:KeyInfo>
+                    <ds:X509Data>
+                        <ds:X509Certificate>
+MIIEMDCCApigAwIBAgIVAPL4EN9kELVAH0TiallLcoEJqOcPMA0GCSqGSIb3DQEB
+CwUAMBwxGjAYBgNVBAMMEWlkcC5iaXRnYXJhbS5pbmZvMB4XDTIwMDYyNjA3NTUy
+MFoXDTQwMDYyNjA3NTUyMFowHDEaMBgGA1UEAwwRaWRwLmJpdGdhcmFtLmluZm8w
+ggGiMA0GCSqGSIb3DQEBAQUAA4IBjwAwggGKAoIBgQCRkNqjVG5Zf415xPAQovzh
+W54r8xA2wJV/Trvhi6OnYfGo6AzYSwjcI1aLwesg2/aHHItyL30ulTGzTsiooui+
+IFlwn3iYQOeYH1MdWfXrzTClHkqbKooR3uS9/CI5WLuKeeTUDXMJytDsRPBCr7tn
+IiSVW5Ap0ZexDCQEzTL3eIlx+OrG/hPpAPYdW1k1n6lq7/n8625ZMI2IKrYcS6Di
+eHpCsN/rVBGU6CfUJCeRSsI+jLOOoOwH2ASvu56adyDOFa1otdBY9To+55urKZHW
+QjSsYCzA86LoqkHXVPoQ3sRlKmbDlsNVTdaNw2a6hcijbV/uQCpH/kJw+3Nxh9pj
+nPP+vcn8T6r0QzqYXNEJ3zSwuDZ7brPXSnLQKQeok1V1UFZLfA0+MwQKI8hI74Vd
+2GTOD/sl2sSu8ep2dS4lwQ7inGMZ10HvfdF35grkASN9xWAD7kMdkljRZJ2F4dHD
+KcyAxoum8dcBt9zbcr7aJHTzUyMMKrKfskE6L7y0KkECAwEAAaNpMGcwHQYDVR0O
+BBYEFB6XKskJ5DBFnO/1kQtKT/E/a2iUMEYGA1UdEQQ/MD2CEWlkcC5iaXRnYXJh
+bS5pbmZvhihodHRwczovL2lkcC5iaXRnYXJhbS5pbmZvL2lkcC9zaGliYm9sZXRo
+MA0GCSqGSIb3DQEBCwUAA4IBgQBLjBt20rMJXmzXIECYYm5foo2KWrxI/0jkO3DX
+7prhCUWU91cfWsnowguqVHv7xdXiTOaEZm4W5LmtODSdfh7s8MWAhrR4+QH4XIpw
+Zd7O3dxDQ1JB/bSdE57hO83jGFcaIvbqjeqkkwRz9K3vUXwPB6mHVT0fbYoYLdXO
+VkF7wFDP4lBb320/jlUZ3kaM4loRWr4+wxlBD9rM2k/OOFEcGstJdMXY/iyccjr1
+ETR1tH28U/bJxIuEYVQ5RRdCCz2ANVNQvfc4NI33WpD6fEnVH4QhDWMlfsjOZhP8
+6TVOSwtve9xiIlcsV2POXGvJvmNMHjk0gq8wXkrns44SUitC25paChFg4bJJ11SF
+LguThB0kzsywM7kY/q+mMAzCr0KsnVsnLAybECcq0JV7nqa5mcpTamMg3xTomv9c
+IyPw6XfrK8L45aQEi+SAQHNWUgaKMwgjAeVxTRxw3wWfvdHqilXSScTSVllzlSA1
+xmImDIzXmou/capZa7uv5DIPRa8=
+                        </ds:X509Certificate>
+                    </ds:X509Data>
+            </ds:KeyInfo>
+
+        </KeyDescriptor>
+
+        <AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://idp.bitgaram.info:8443/idp/profile/SAML1/SOAP/AttributeQuery"/>
+        <!-- <AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://idp.bitgaram.info:8443/idp/profile/SAML2/SOAP/AttributeQuery"/> -->
+        <!-- If you uncomment the above you should add urn:oasis:names:tc:SAML:2.0:protocol to the protocolSupportEnumeration above -->
+
+    </AttributeAuthorityDescriptor>
+
+</EntityDescriptor>
