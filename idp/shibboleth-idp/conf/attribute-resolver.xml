@@ -64,7 +64,8 @@
                     ID,
                     EMAIL,
                     LAST_NAME,
-                    FIRST_NAME
+                    FIRST_NAME,
+                    USERNAME
                     FROM DBUSER.USERS
                     WHERE USERNAME='$resolutionContext.principal'
 	            ]]>
