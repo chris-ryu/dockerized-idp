@@ -29,11 +29,6 @@
         <resolver:AttributeEncoder xsi:type="enc:SAML1String" name="urn:mace:dir:attribute-def:givenName" />
     </resolver:AttributeDefinition>
 
-    <resolver:AttributeDefinition xsi:type="ad:Simple" id="givenName" sourceAttributeID="givenName">
-        <resolver:Dependency ref="Oracle" />
-        <resolver:AttributeEncoder xsi:type="enc:SAML1String" name="urn:mace:dir:attribute-def:givenName" />
-    </resolver:AttributeDefinition>
-
     <resolver:AttributeDefinition xsi:type="ad:Simple" id="sn" sourceAttributeID="sn">
         <resolver:Dependency ref="Oracle" />
         <resolver:AttributeEncoder xsi:type="enc:SAML1String" name="urn:mace:dir:attribute-def:sn" />
@@ -44,11 +39,11 @@
         <resolver:AttributeEncoder xsi:type="enc:SAML1String" name="urn:mace:dir:attribute-def:mail" />
     </resolver:AttributeDefinition>
 
-    <resolver:AttributeDefinition xsi:type="ad:Simple" id="uid" sourceAttributeID="uid">
+    <resolver:AttributeDefinition xsi:type="ad:Simple" id="eptid" sourceAttributeID="eptid">
         <resolver:Dependency ref="Oracle" />
-        <resolver:AttributeEncoder xsi:type="enc:SAML1String" name="urn:mace:dir:attribute-def:uid" />
+        <resolver:AttributeEncoder xsi:type="enc:SAML1String" name="urn:mace:dir:attribute-def:eptid" />
     </resolver:AttributeDefinition>
-
+    
     <resolver:DataConnector id="Oracle" xsi:type="RelationalDatabase" 
         xmlns="urn:mace:shibboleth:2.0:resolver">
         <SimpleManagedConnection jdbcDriver="oracle.jdbc.driver.OracleDriver" jdbcURL="jdbc:oracle:thin:@//13.209.18.89:32118/XEPDB1" jdbcUserName="dbuser" jdbcPassword="dbpassword" />
@@ -66,6 +61,7 @@
 
         </QueryTemplate>
         <Column columnName="EMAIL" attributeID="mail" />
+        <Column columnName="ID" attributeID="eptid" />
         <Column columnName="LAST_NAME" attributeID="sn" />
         <Column columnName="FIRST_NAME" attributeID="givenName" />
     </resolver:DataConnector>
