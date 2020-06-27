@@ -21,21 +21,24 @@
             <Rule xsi:type="Requester" value="http://idptestbed/sp/simplesamlphp" />
         </PolicyRequirementRule>
 
-        <AttributeRule attributeID="eptid">
+        <AttributeRule attributeID="uid">
+            <PermitValueRule xsi:type="ANY" />
+    	</AttributeRule>
+        <AttributeRule attributeID="displayName">
             <PermitValueRule xsi:type="ANY" />
         </AttributeRule>
-
-        <AttributeRule attributeID="mail">
+    	<AttributeRule attributeID="mail">
             <PermitValueRule xsi:type="ANY" />
-        </AttributeRule>
-
-        <AttributeRule attributeID="sn">
+    	</AttributeRule>
+	<AttributeRule attributeID="givenName">
             <PermitValueRule xsi:type="ANY" />
-        </AttributeRule>
-
-        <AttributeRule attributeID="givenName">
+	</AttributeRule>
+    	<AttributeRule attributeID="surname">
+        	<PermitValueRule xsi:type="ANY" />
+    	</AttributeRule>
+    	<AttributeRule attributeID="eduPersonPrincipalName">
             <PermitValueRule xsi:type="ANY" />
-        </AttributeRule>
+    	</AttributeRule>
 
     </AttributeFilterPolicy>
 

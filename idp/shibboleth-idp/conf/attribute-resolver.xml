@@ -29,9 +29,9 @@
         <resolver:AttributeEncoder xsi:type="enc:SAML1String" name="urn:mace:dir:attribute-def:givenName" />
     </resolver:AttributeDefinition>
 
-    <resolver:AttributeDefinition xsi:type="ad:Simple" id="sn" sourceAttributeID="sn">
+    <resolver:AttributeDefinition xsi:type="ad:Simple" id="surname" sourceAttributeID="surname">
         <resolver:Dependency ref="Oracle" />
-        <resolver:AttributeEncoder xsi:type="enc:SAML1String" name="urn:mace:dir:attribute-def:sn" />
+        <resolver:AttributeEncoder xsi:type="enc:SAML1String" name="urn:mace:dir:attribute-def:surname" />
     </resolver:AttributeDefinition>
 
     <resolver:AttributeDefinition xsi:type="ad:Simple" id="mail" sourceAttributeID="mail">
@@ -39,9 +39,15 @@
         <resolver:AttributeEncoder xsi:type="enc:SAML1String" name="urn:mace:dir:attribute-def:mail" />
     </resolver:AttributeDefinition>
 
-    <resolver:AttributeDefinition xsi:type="ad:Simple" id="eptid" sourceAttributeID="eptid">
+    <resolver:AttributeDefinition xsi:type="ad:Simple" id="uid" sourceAttributeID="uid">
         <resolver:Dependency ref="Oracle" />
-        <resolver:AttributeEncoder xsi:type="enc:SAML1String" name="urn:mace:dir:attribute-def:eptid" />
+        <resolver:AttributeEncoder xsi:type="enc:SAML1String" name="urn:mace:dir:attribute-def:uid" />
+    </resolver:AttributeDefinition>
+
+     <resolver:AttributeDefinition id="eduPersonPrincipalName" xsi:type="Scoped" scope="%{idp.scope}" sourceAttributeID="mail">
+        <resolver:Dependency ref="mail" />
+        <resolver:AttributeEncoder xsi:type="enc:SAML1ScopedString" name="urn:mace:dir:attribute-def:eduPersonPrincipalName" encodeType="false" />
+        <resolver:AttributeEncoder xsi:type="enc:SAML2ScopedString" name="urn:oid:1.3.6.1.4.1.5923.1.1.1.6" friendlyName="eduPersonPrincipalName" encodeType="false" />
     </resolver:AttributeDefinition>
     
     <resolver:DataConnector id="Oracle" xsi:type="RelationalDatabase" 
@@ -61,8 +67,8 @@
 
         </QueryTemplate>
         <Column columnName="EMAIL" attributeID="mail" />
-        <Column columnName="ID" attributeID="eptid" />
-        <Column columnName="LAST_NAME" attributeID="sn" />
+        <Column columnName="ID" attributeID="uid" />
+        <Column columnName="LAST_NAME" attributeID="surname" />
         <Column columnName="FIRST_NAME" attributeID="givenName" />
     </resolver:DataConnector>
 </resolver:AttributeResolver>
