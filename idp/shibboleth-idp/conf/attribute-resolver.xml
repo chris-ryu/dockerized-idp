@@ -56,7 +56,7 @@
                     LAST_NAME,
                     FIRST_NAME 
                     FROM DBUSER.USERS
-                    WHERE id='$requestContext.principalName'
+                    WHERE id=$resolutionContext.principal
 	            ]]>
 
         </QueryTemplate>
