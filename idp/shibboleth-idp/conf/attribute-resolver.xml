@@ -71,7 +71,8 @@
                     EMAIL,
                     LAST_NAME,
                     FIRST_NAME,
-                    USERNAME
+                    USERNAME,
+                    TITLE
                     FROM DBUSER.USERS
                     WHERE USERNAME='$resolutionContext.principal'
 	            ]]>
@@ -81,5 +82,6 @@
         <Column columnName="LAST_NAME" attributeID="sn" />
         <Column columnName="FIRST_NAME" attributeID="givenName" />
         <Column columnName="USERNAME" attributeID="uid" />
+        <Column columnName="TITLE" attributeID="title" />
     </resolver:DataConnector>
 </resolver:AttributeResolver>
