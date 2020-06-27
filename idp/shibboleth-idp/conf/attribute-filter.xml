@@ -15,10 +15,11 @@
 
     <!-- Release some attributes to an SP. -->
     <AttributeFilterPolicy id="example1">
-        <!-- <PolicyRequirementRule xsi:type="OR">
+        <PolicyRequirementRule xsi:type="OR">
             <Rule xsi:type="Requester" value="https://sp.idptestbed/shibboleth" />
+            <Rule xsi:type="Requester" value="https://ds.sichimi.kr" />
             <Rule xsi:type="Requester" value="http://idptestbed/sp/simplesamlphp" />
-        </PolicyRequirementRule> -->
+        </PolicyRequirementRule>
 
         <AttributeRule attributeID="eptid">
             <PermitValueRule xsi:type="ANY" />
