@@ -1,4 +1,4 @@
-FROM unicon/shibboleth-idp:latest
+FROM chrisryu/shibboleth-idp:latest
 
 MAINTAINER Chris Ryu
 
